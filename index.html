@@ -53,13 +53,6 @@
       const text = Array.from(blocks)
         .map(block => block.innerText.trim())
         .join("\n\n");
-
-      try {
-        await navigator.clipboard.writeText(text);
-        alert("Copied.");
-      } catch (error) {
-        alert("Copy failed. Please select the text manually.");
-      }
     }
   </script>
 
