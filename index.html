@@ -34,11 +34,7 @@
 
   <style>
     .hidden-copy {
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
+      display: none;
     }
   </style>
   
@@ -68,7 +64,7 @@
     const blocks = document.querySelectorAll(".text-to-copy");
 
     const text = Array.from(blocks)
-      .map(block => block.innerText.trim())
+      .map(block => block.textContent.trim())
       .join("\n\n");
 
     try {
